@@ -21,8 +21,6 @@ var images = {
     wink: 'b222730f-7983-48ae-80fc-4f2c20c7936c'
 };
 
-var fontSize = 12;
-
 cb.onDrawPanel(function (user) {
     var image = '';
     switch(cb.settings.panelImage) {
