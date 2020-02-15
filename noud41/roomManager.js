@@ -5,6 +5,7 @@
  */
 
 cb.settings_choices = [
+    {name: 'room', type: 'str', label: 'Room title'},
     {name: 'panelImage', type: 'str', label: 'Panel image'},
     {name: 'panelText', type: 'str', label: 'Panel text'},
     {name: 'panelTextColor', type: 'str', label: 'Panel text color'},
@@ -88,42 +89,41 @@ cb.onMessage(function (msg) {
     const userName = getUserName(msg['user']);
     const params = getParams(msg['m']);
 
-    // if (msg['user'] == cb.room_slug) {
-    //     cb.chatNotice("Message sent by broadcaster")
-    // }
+    if (msg['user'] == cb.room_slug) {
+        if (msg['m'].match(/\/room/i)) {
+            cb.changeRoomSubject(params)
+            cb.settings.room = params;
+        }
 
-    if (msg['m'].match(/\/room/i)) {
-        cb.changeRoomSubject(params)
-    }
+        if (msg['m'].match(/\/cam_limit/i)) {
+            cb.limitCam_start(params);
+        }
 
-    if (msg['m'].match(/\/cam_limit/i)) {
-        cb.limitCam_start(params);
-    }
+        if (msg['m'].match(/\/cam_unlimit/i)) {
+            cb.limitCam_stop();
+        }
+        
+        if (msg['m'].match(/\/panel/i)) {
+            cb.drawPanel();
+        }
 
-    if (msg['m'].match(/\/cam_unlimit/i)) {
-        cb.limitCam_stop();
-    }
-    
-    if (msg['m'].match(/\/panel/i)) {
-        cb.drawPanel();
-    }
+        if (msg['m'].match(/\/panel_image/i)) {
+            cb.settings.panelImage = params;
+        }
 
-    if (msg['m'].match(/\/panel_image/i)) {
-        cb.settings.panelImage = params;
-    }
+        if (msg['m'].match(/\/panel_text/i)) {
+            cb.settings.panelText = params;
+        }
 
-    if (msg['m'].match(/\/panel_text/i)) {
-        cb.settings.panelText = params;
+        // experiment
+        if (msg['m'].match(/\/flash/i)) {
+            cb.chatNotice('>>flash **' + userName + '** flash<< !');
+        }
+        
+        // if (msg['m'].match(/\/say/i)) {
+        //     cb.chatNotice('' + userName + ' says ' + params);
+        // }
     }
-
-    // experiment
-    if (msg['m'].match(/\/flash/i)) {
-        cb.chatNotice('>>flash **' + userName + '** flash<< !');
-    }
-    
-    // if (msg['m'].match(/\/say/i)) {
-    //     cb.chatNotice('' + userName + ' says ' + params);
-    // }
 });
 
 cb.onTip(function (tip) {
@@ -165,6 +165,7 @@ function showAppAd(username) {
 }
 
 function init() {
+    cb.changeRoomSubject(cb.settings.room);
     // advertise();
     //  cb.settings.tokens
     const roomSubject = 'room';
