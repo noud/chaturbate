@@ -43,6 +43,7 @@ cb.onDrawPanel(function (user) {
     var text = getPanelText();
     const color = cb.settings.panelTextColor;
     const fontSize = cb.settings.panelTextFontSize;
+    const fontSpacing = 24;
 
     // imageMargin and text positioning
     const top = cb.settings.panelTextTop;
@@ -58,13 +59,29 @@ cb.onDrawPanel(function (user) {
             {'type': 'image', 'fileID': image},
             {
                 'type': 'text',
+                'text': 'so',
+                'top': top - (fontSpacing * 2),
+                'left': left,
+                'font-size': fontSize,
+                'color': color,
+            },
+            {
+                'type': 'text',
+                'text': 'nice',
+                'top': top - fontSpacing,
+                'left': left,
+                'font-size': fontSize,
+                'color': color,
+            },
+            {
+                'type': 'text',
                 'text': text,
                 'left': left,
                 'top': top,
                 'font-size': fontSize,
                 'color': color,
             },
-          ],
+        ],
       };
   
 });
