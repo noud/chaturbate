@@ -27,7 +27,7 @@ var new_subject_command = '!status';
 var help_command = '!help';
 
 cb.settings_choices = [
-    {name: 'tokens', type: 'int', minValue: 1, default: 100, label: 'Tokens'},
+    {name: 'tokens', type: 'int', minValue: 0, default: 100, label: 'Tokens'},
     {name: 'goal_description', type: 'str', minLength: 1, maxLength: 555, label: 'Goal Description'},
 	{name: 'received_tokens', type: 'int', minValue: 0, default: 0, label: 'Already received tokens'}
 ];

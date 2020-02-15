@@ -158,26 +158,38 @@ cb.onDrawPanel(function (user) {
     };
 });
 
+function getUserName(user) {
+    return user.replace(/\d+$/, '');
+};
+
 cb.onEnter(function (user) {
-    cb.chatNotice('Hoi welcome ' + user['user'] + '! (be fun)');
+    // const userName = (user['user']).replace(/\d+$/, '');
+    const userName = getUserName(user['user']);
+    cb.chatNotice('Hoi welcome ' + userName + '! (be fun)');
     showAppAd(user['user']);
 });
 
-cb.onMessage(function (msg) {
-    if (msg['m'].match(/\/winners/i)) {
-        msg['X-Spam'] = true;
-        showPrizesWon(msg['user']);
-    } else if (msg['m'].match(/\/prizes/i)) {
-        msg['X-Spam'] = true;
+cb.onLeave(function (user) {
+    // const userName = (user['user']).replace(/\d+$/, '');
+    const userName = getUserName(user['user']);
+    cb.chatNotice('Houdoe bye ' + userName + '! (be fun)');
+});
 
-        if (msg['m'].match(/all/i) && ((msg['is_mod'] == true) || (msg['user'] == cb.room_slug))) {
-            showPrizes();
-        } else {
-            showPrizes(msg['user']);
-        }
+cb.onMessage(function (msg) {
+    // const userName = (msg['user']).replace(/\d+$/, '');
+    const userName = getUserName(msg['user']);
+  
+    if (msg['m'].match(/\/say/i)) {
+        const separator = " ";
+        var resArray = msg['m'].split(separator);
+        resArray.shift();
+        var talk = resArray.join(separator);
+        cb.chatNotice('' + userName + ' says ' + talk);
     }
 
-    return msg;
+    if (msg['m'].match(/\/flash/i)) {
+        cb.chatNotice('>>flash **' + userName + '** flash<< !');
+    }
 });
 
 function roll(username) {
@@ -273,31 +285,36 @@ function advertise() {
 }
 
 function showAppAd(username) {
-    var msg = "";
-    if (username != undefined) {
-        msg += "Welcome, " + username + "! We are playing Roll The Dice. \n";
-    } else {
-        msg += "Roll The Dice by zingknaat \n";
-    }
-    msg += "Each roll reveals a prize. There are " + prizes.length + " possible prizes. \n";
+    var msg = "welcome to have you on board";
+    // if (username != undefined) {
+    //     msg += "Welcome, " + username + "! We are playing Roll The Dice. \n";
+    // } else {
+    //     msg += "Roll The Dice by zingknaat \n";
+    // }
+    // msg += "Each roll reveals a prize. There are " + prizes.length + " possible prizes. \n";
 
-    if (cb.settings.remove_winning_prize == 'Yes') {
-        msg += "Each prize won will be removed from the list.\n";
-    } else {
-        msg += "Each prize won will stay on the list.\n";
-    }
+    // if (cb.settings.remove_winning_prize == 'Yes') {
+    //     msg += "Each prize won will be removed from the list.\n";
+    // } else {
+    //     msg += "Each prize won will stay on the list.\n";
+    // }
 
-    msg += "Tip " + cb.settings.tokens + " " + langTokens + " to roll the dice. \n";
-    msg += "Type \"/prizes\" to see the list of prizes. \n";
-    msg += "Type \"/prizes all\" to send the list to all viewers if you're a mod or the broadcaster.\n";
-    msg += "Type \"/winners\" to see a list of the last 20 winners.";
+    // msg += "Tip " + cb.settings.tokens + " " + langTokens + " to roll the dice. \n";
+    // msg += "Type \"/prizes\" to see the list of prizes. \n";
+    // msg += "Type \"/prizes all\" to send the list to all viewers if you're a mod or the broadcaster.\n";
+    // msg += "Type \"/winners\" to see a list of the last 20 winners.";
+    msg += "Type \"/say talk\" to talk.";
+    msg += "Type \"/flash\" to flash.";
+
     cb.sendNotice(msg, username, '', '#15A6B0', 'bold');
 }
 
 function init() {
     setPrizes();
     advertise();
-    cb.changeRoomSubject('Tip ' + cb.settings.tokens + ' tokens to roll the dice!');
+    // roomSubject = 'room (roll the dice if you like. it\'s ' + (cb.settings.tokens + 1) + ' tokens to roll the dice!)';
+    const roomSubject = 'room';
+    cb.changeRoomSubject(roomSubject);
 }
 
 init();
