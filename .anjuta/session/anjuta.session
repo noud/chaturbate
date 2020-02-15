@@ -1,0 +1,28 @@
+[Anjuta]
+Geometry=1027x821+9+25
+
+[File Loader]
+Files=../../zingknaat/Room_Rules.js#1%%%../../__your_dream__/*****.js#22
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
+[Execution]
+Program arguments=
+Program uri=../../zingknaat/Room_Rules.js
+Run in terminal=2
+Working directories=../../../chaturbate
+
+[Project Manager]
+Expand=chaturbate%%%chaturbate//__your_dream__%%%chaturbate//admin%%%chaturbate//asudem%%%chaturbate//badbadbubba%%%chaturbate//bobomb%%%chaturbate//britney_and_justin%%%chaturbate//danyxxx2013%%%chaturbate//littlemissmiarose%%%chaturbate//melezouriou%%%chaturbate//tightasian20%%%chaturbate//zingknaat
+
+[Build]
+Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized
+Selected Configuration=Default
+BuildArgs/Default=--enable-maintainer-mode
+BuildArgs/Debug=--enable-maintainer-mode 'CFLAGS=-g -O0' 'CXXFLAGS=-g -O0' 'JFLAGS=-g -O0' 'FFLAGS=-g -O0'
+BuildArgs/Profiling=--enable-maintainer-mode 'CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
+BuildArgs/Optimized=--enable-maintainer-mode 'CFLAGS=-O2' 'CXXFLAGS=-O2' 'JFLAGS=-O2' 'FFLAGS=-O2'
+
+[Debugger]
+Stop at beginning=2
