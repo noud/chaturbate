@@ -41,8 +41,6 @@ cb.onDrawPanel(function (user) {
     }
 
     var text = getPanelText();
-    // const color = cb.settings.panelTextColor ? cb.settings.panelTextColor : 'green';
-    // const fontSize = cb.settings.panelTextFontSize ? cb.settings.panelTextFontSize : '14';
     const color = cb.settings.panelTextColor;
     const fontSize = cb.settings.panelTextFontSize;
 
@@ -112,15 +110,6 @@ cb.onMessage(function (msg) {
         if (msg['m'].match(/\/panel_text/i)) {
             cb.settings.panelText = params;
         }
-
-        // experiment
-        if (msg['m'].match(/\/flash/i)) {
-            cb.chatNotice('>>flash **' + userName + '** flash<< !');
-        }
-        
-        // if (msg['m'].match(/\/say/i)) {
-        //     cb.chatNotice('' + userName + ' says ' + params);
-        // }
     }
 });
 
