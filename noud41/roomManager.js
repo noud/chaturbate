@@ -2,6 +2,7 @@
  * App: roomManager
  * Version: 1.0.0
  * Author: noud41
+ * Readme: https://github.com/noud/chaturbate/blob/master/noud41/roomManager.md
  */
 
 const colorYellow = 'yellow';
@@ -131,42 +132,47 @@ cb.onDrawPanel(function (user) {
     // const imageMargin = 150;
     // const left = cb.settings.panelTextLeft + imageMargin;
 
-    return {
+    const imageLayer = {
+        'type': 'image',
+        'fileID': images[cb.settings.panelImage],
+        'left':  cb.settings.panelImageLeft,
+        'top': cb.settings.panelImageTop,
+        'opacity': cb.settings.panelImageOpacity
+    };
+
+    var layers = [
+        {
+            'type': 'text',
+            'text': cb.settings.panelText1,
+            'top': top - (fontSpacing * 2),
+            'left': left,
+            'font-size': fontSize,
+            'color': color,
+        },
+        {
+            'type': 'text',
+            'text': cb.settings.panelText2,
+            'top': top - fontSpacing,
+            'left': left,
+            'font-size': fontSize,
+            'color': color,
+        },
+        {
+            'type': 'text',
+            'text': cb.settings.panelText3,
+            'left': left,
+            'top': top,
+            'font-size': fontSize,
+            'color': color,
+        },
+    ];
+    layers.unshift(imageLayer);
+
+    const panel = {
         "template": "image_template",
-        "layers": [
-            {
-                'type': 'image',
-                'fileID': images[cb.settings.panelImage],
-                'left':  cb.settings.panelImageLeft,
-                'top': cb.settings.panelImageTop,
-                'opacity': cb.settings.panelImageOpacity
-            },
-            {
-                'type': 'text',
-                'text': cb.settings.panelText1,
-                'top': top - (fontSpacing * 2),
-                'left': left,
-                'font-size': fontSize,
-                'color': color,
-            },
-            {
-                'type': 'text',
-                'text': cb.settings.panelText2,
-                'top': top - fontSpacing,
-                'left': left,
-                'font-size': fontSize,
-                'color': color,
-            },
-            {
-                'type': 'text',
-                'text': cb.settings.panelText3,
-                'left': left,
-                'top': top,
-                'font-size': fontSize,
-                'color': color,
-            },
-        ],
+        "layers": layers,
       };
+      return panel;
 });
 
 // onHandles
