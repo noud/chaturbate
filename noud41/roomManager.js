@@ -4,7 +4,8 @@
  * Author: noud41
  */
 
-const colorCode = '#008000';
+const colorCodeGreen = '#008000';
+const colorCodeBlue = '#0000FF';
 
 const panelTextColorDefaultValue = 'green';
 const panelImageDefaultValue = 'fuck';
@@ -15,9 +16,10 @@ cb.settings_choices = [
         choice1: 'ass',
         choice2: 'brb',
         choice3: panelImageDefaultValue,
-        choice4: 'kisses',
-        choice5: 'what',
-        choice6: 'wink',
+        choice4: 'hello',
+        choice5: 'kisses',
+        choice6: 'what',
+        choice7: 'wink',
         defaultValue: panelImageDefaultValue
     },
     {name: 'panelText1', type: 'str', label: 'Panel text 1'},
@@ -39,6 +41,7 @@ var images = {
     ass: '6735e182-6178-46a1-a7cf-79c0ea86fa77',
     brb: '96349a24-b717-4a3d-aca1-46ea1cd6b5cb',
     fuck: '90284acc-63cc-440a-b4b1-600f7cce31c0',
+    hello: 'a0ecf610-7516-41eb-9f1c-ebdc7feec449',
     kisses: 'a78c3fa9-4091-4a53-929e-8754b814d97a',
     what: '56e5c9fe-8671-48dd-80be-c7aa885fd694',
     wink: 'b222730f-7983-48ae-80fc-4f2c20c7936c'
@@ -65,8 +68,9 @@ cb.onDrawPanel(function (user) {
         case 'wink':
             image = images.wink;
             break;
+        case 'hello':
         default:
-            image = images.brb;
+            image = images.hello;
     }
 
     var text1 = getPanelText1();
@@ -119,12 +123,12 @@ cb.onDrawPanel(function (user) {
 
 cb.onEnter(function (user) {
     const userName = getUserName(user['user']);
-    cb.chatNotice('Hoi welcome ' + userName + '! (be fun)', null, null, colorCode);
+    cb.chatNotice('Hoi welcome ' + userName + '! (be fun)', null, null, colorCodeGreen);
 });
 
 cb.onLeave(function (user) {
     const userName = getUserName(user['user']);
-    cb.chatNotice('Houdoe bye ' + userName + '! (be fun)', null, null, colorCode);
+    cb.chatNotice('Houdoe bye ' + userName + '! (be fun)', null, null, colorCodeBlue);
 });
 
 cb.onMessage(function (msg) {
