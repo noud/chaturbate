@@ -11,7 +11,7 @@
 ```
 /room title
 /panel
-/panel_image [brb|fuck|kisses|what|wink]
+/panel_image [ass|brb|fuck|kisses|what|wink]
 /panel_text_1 anyStartingText
 /panel_text_2 anyMoreText
 /panel_text_3 anyEndingText

@@ -10,11 +10,12 @@ const panelImageDefaultValue = 'fuck';
 cb.settings_choices = [
     {name: 'room', type: 'str', minLength: 1, maxLength: 270, label: 'Room title'},
     {name: 'panelImage', type:'choice', label: 'Panel image',
-        choice1: 'brb',
-        choice2: panelImageDefaultValue,
-        choice3: 'kisses',
-        choice4: 'what',
-        choice5: 'wink',
+        choice1: 'ass',
+        choice2: 'brb',
+        choice3: panelImageDefaultValue,
+        choice4: 'kisses',
+        choice5: 'what',
+        choice6: 'wink',
         defaultValue: panelImageDefaultValue
     },
     {name: 'panelText1', type: 'str', label: 'Panel text 1'},
@@ -33,6 +34,7 @@ cb.settings_choices = [
 ];
 
 var images = {
+    ass: '6735e182-6178-46a1-a7cf-79c0ea86fa77',
     brb: '96349a24-b717-4a3d-aca1-46ea1cd6b5cb',
     fuck: '90284acc-63cc-440a-b4b1-600f7cce31c0',
     kisses: 'a78c3fa9-4091-4a53-929e-8754b814d97a',
@@ -43,6 +45,9 @@ var images = {
 cb.onDrawPanel(function (user) {
     var image = '';
     switch(cb.settings.panelImage) {
+        case 'ass':
+            image = images.ass;
+            break;
         case 'brb':
             image = images.brb;
             break;
