@@ -11,15 +11,21 @@
 ```
 /room title
 
+/cam_limit awayMessage
+/cam_unlimit
+
+/on_enter_message anyMessage with <userName>
+/on_enter_color [yellow|red|green|blue|black]
+
+/on_leave_message anyMessage with <userName>
+/on_leave_color [yellow|red|green|blue|black]
+
 /panel
 /panel_image [ass|brb|fuck|hello|kisses|suck|what|wink]
 /panel_text_1 anyStartingText
 /panel_text_2 anyMoreText
 /panel_text_3 anyEndingText
-/panel_text_color [yellow|red|green|black]
-
-/cam_limit awayMessage
-/cam_unlimit
+/panel_text_color [yellow|red|green|blue|black]
 ```
 
 ## [app details](https://chaturbate.com/apps/app_details/roommanager/?version=&slot=0)
