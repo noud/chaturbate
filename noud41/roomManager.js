@@ -113,7 +113,6 @@ cb.onDrawPanel(function (user) {
             },
         ],
       };
-  
 });
 
 // onHandles
