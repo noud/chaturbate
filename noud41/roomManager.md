@@ -38,7 +38,7 @@
 ```
 ## Launch App
 
-![Launch App](./doc/Launch_App.png "Launch App")
+![Launch App](./docs/Launch_App.png?raw=true "Launch App")
 
 ## [app details](https://chaturbate.com/apps/app_details/roommanager/?version=&slot=0)
 
