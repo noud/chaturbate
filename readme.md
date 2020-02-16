@@ -1,4 +1,4 @@
-[![Chaturbate](./../logo.png?raw=true "Chaturbate")
+[![Chaturbate](./logo.png?raw=true "Chaturbate")
 ](https://chaturbate.com/)
 
 [Apps & Bots Programming Documentation](https://chaturbate.com/apps/docs)
