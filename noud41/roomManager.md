@@ -12,7 +12,9 @@
 /room title
 /panel
 /panel_image [brb|kisses|what|wink]
-/panel_text any
+/panel_text_1 anyStartingText
+/panel_text_2 anyMoreText
+/panel_text_3 anyEndingText
 /cam_limit awayMessage
 /cam_unlimit
 ```

@@ -7,7 +7,9 @@
 cb.settings_choices = [
     {name: 'room', type: 'str', label: 'Room title'},
     {name: 'panelImage', type: 'str', label: 'Panel image'},
-    {name: 'panelText', type: 'str', label: 'Panel text'},
+    {name: 'panelText1', type: 'str', label: 'Panel text 1'},
+    {name: 'panelText2', type: 'str', label: 'Panel text 2'},
+    {name: 'panelText3', type: 'str', label: 'Panel text 3'},
     {name: 'panelTextColor', type: 'str', label: 'Panel text color'},
     {name: 'panelTextTop', type: 'str', label: 'Panel text top'},
     {name: 'panelTextLeft', type: 'str', label: 'Panel text left'},
@@ -40,7 +42,9 @@ cb.onDrawPanel(function (user) {
             image = images.brb;
     }
 
-    var text = getPanelText();
+    var text1 = getPanelText1();
+    var text2 = getPanelText2();
+    var text3 = getPanelText3();
     const color = cb.settings.panelTextColor;
     const fontSize = cb.settings.panelTextFontSize;
     const fontSpacing = 24;
@@ -59,7 +63,7 @@ cb.onDrawPanel(function (user) {
             {'type': 'image', 'fileID': image},
             {
                 'type': 'text',
-                'text': 'so',
+                'text': text1,
                 'top': top - (fontSpacing * 2),
                 'left': left,
                 'font-size': fontSize,
@@ -67,7 +71,7 @@ cb.onDrawPanel(function (user) {
             },
             {
                 'type': 'text',
-                'text': 'nice',
+                'text': text2,
                 'top': top - fontSpacing,
                 'left': left,
                 'font-size': fontSize,
@@ -75,7 +79,7 @@ cb.onDrawPanel(function (user) {
             },
             {
                 'type': 'text',
-                'text': text,
+                'text': text3,
                 'left': left,
                 'top': top,
                 'font-size': fontSize,
@@ -123,9 +127,15 @@ cb.onMessage(function (msg) {
         if (msg['m'].match(/\/panel_image/i)) {
             cb.settings.panelImage = params;
         }
-
-        if (msg['m'].match(/\/panel_text/i)) {
-            cb.settings.panelText = params;
+        // @todo clean this
+        if (msg['m'].match(/\/panel_text_1/i)) {
+            cb.settings.panelText1 = params;
+        }
+        if (msg['m'].match(/\/panel_text_2/i)) {
+            cb.settings.panelText2 = params;
+        }
+        if (msg['m'].match(/\/panel_text_3/i)) {
+            cb.settings.panelText3 = params;
         }
     }
 });
@@ -142,11 +152,26 @@ function getUserName(user) {
     return userName.replace(/_+$/,'');
 };
 
-function getPanelText() {
+function getPanelText1() {
     // @todo limit to 27 chars
     // let's code and love black d
-    panelText = cb.settings.panelText ? cb.settings.panelText : 'Howdy';
-    return panelText;
+    panelText1 = cb.settings.panelText1 ? cb.settings.panelText1 : 'so';
+    return panelText1;
+};
+
+// @todo clean this
+function getPanelText2() {
+    // @todo limit to 27 chars
+    // let's code and love black d
+    panelText2 = cb.settings.panelText2 ? cb.settings.panelText2 : 'nice';
+    return panelText2;
+};
+
+function getPanelText3() {
+    // @todo limit to 27 chars
+    // let's code and love black d
+    panelText3 = cb.settings.panelText3 ? cb.settings.panelText3 : 'nice';
+    return panelText3;
 };
 
 function getParams(message) {
