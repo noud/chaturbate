@@ -5,11 +5,25 @@
  * Readme: https://github.com/noud/chaturbate/blob/master/noud41/roomManager.md
  */
 
-const colorYellow = 'yellow';
-const colorRed = 'red';
-const colorGreen = 'green';
+ 
+// The 17 standard colors are:
+const colorAqua = 'aqua';
+const colorBlack = ' black';
 const colorBlue = 'blue';
-const colorBlack = 'black';
+const colorFuchsia = 'fuchsia';
+const colorGray = ' gray';
+const colorGrey = 'grey';
+const colorGreen = 'green';
+const colorLime = 'lime';
+const colorMaroon = 'maroon';
+const colorNavy = 'navy';
+const colorOlive = 'olive';
+const colorPurple = 'purple';
+const colorRed = 'red';
+const colorSilver = 'silver';
+const colorTeal = 'teal';
+const colorWhite = 'white';
+const colorYellow = 'yellow';
 
 const colorCodeGreen = '#008000';
 const colorCodeBlue = '#0000FF';
@@ -18,9 +32,11 @@ const colorCodeBlue = '#0000FF';
 
 const panelImageDefaultValue = 'fuck';
 
+const textLayers = 4;
 const panelText1 = 'so';
 const panelText2 = 'nice';
 const panelText3 = 'code loves';
+const panelText4 = 'https://github.com/noud/chaturbate';
 
 const panelTextColorDefaultValue = colorGreen;
 
@@ -57,19 +73,44 @@ cb.settings_choices = [
     // onHandles
     {name: 'enterMessage', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'Enter message'},
     {name: 'enterColor', type:'choice', label: 'Enter color',
-        choice1: colorYellow,
-        choice2: colorRed,
-        choice3: colorGreen,
-        choice4: colorBlue,
-        choice5: colorBlack,
+        choice1: colorAqua,
+        choice2: colorBlack,
+        choice3: colorBlue,
+        choice4: colorFuchsia,
+        choice5: colorGray,
+        choice6: colorGrey,
+        choice7: colorGreen,
+        choice8: colorLime,
+        choice9: colorMaroon,
+        choice10: colorNavy,
+        choice11: colorOlive,
+        choice12: colorPurple,
+        choice13: colorRed,
+        choice14: colorSilver,
+        choice15: colorTeal,
+        choice16: colorWhite,
+        choice17: colorYellow,
         defaultValue: colorCodeGreen
     },
     {name: 'leaveMessage', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'Leave message'},
     {name: 'leaveColor', type:'choice', label: 'Leave color',
-        choice1: colorYellow,
-        choice2: colorRed,
-        choice3: colorGreen,
-        choice4: colorBlack,
+        choice1: colorAqua,
+        choice2: colorBlack,
+        choice3: colorBlue,
+        choice4: colorFuchsia,
+        choice5: colorGray,
+        choice6: colorGrey,
+        choice7: colorGreen,
+        choice8: colorLime,
+        choice9: colorMaroon,
+        choice10: colorNavy,
+        choice11: colorOlive,
+        choice12: colorPurple,
+        choice13: colorRed,
+        choice14: colorSilver,
+        choice15: colorTeal,
+        choice16: colorWhite,
+        choice17: colorYellow,
         defaultValue: colorCodeBlue
     },
     // Panel
@@ -93,11 +134,25 @@ cb.settings_choices = [
     {name: 'panelText1', defaultValue: panelText1, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 1'},
     {name: 'panelText2', defaultValue: panelText2, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 2'},
     {name: 'panelText3', defaultValue: panelText3, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 3'},
+    {name: 'panelText4', defaultValue: panelText4, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 4'},
     {name: 'panelTextColor', type:'choice', label: 'Panel text color',
-        choice1: colorYellow,
-        choice2: colorRed,
-        choice3: panelTextColorDefaultValue,
-        choice4: colorBlack,
+        choice1: colorAqua,
+        choice2: colorBlack,
+        choice3: colorBlue,
+        choice4: colorFuchsia,
+        choice5: colorGray,
+        choice6: colorGrey,
+        choice7: colorGreen,
+        choice8: colorLime,
+        choice9: colorMaroon,
+        choice10: colorNavy,
+        choice11: colorOlive,
+        choice12: colorPurple,
+        choice13: colorRed,
+        choice14: colorSilver,
+        choice15: colorTeal,
+        choice16: colorWhite,
+        choice17: colorYellow,
         defaultValue: panelTextColorDefaultValue
     },
     {name: 'panelTextLeft', type: 'int', minValue: panelTextTopMin, maxValue: panelTextTopMax, defaultValue: 0, label: 'Panel text left'},
@@ -113,7 +168,8 @@ var images = {
     fuck: '90284acc-63cc-440a-b4b1-600f7cce31c0',
     hello: 'a0ecf610-7516-41eb-9f1c-ebdc7feec449',
     kisses: 'a78c3fa9-4091-4a53-929e-8754b814d97a',
-    shower: '7307c83b-7c10-44c5-881a-dd90ffb7977b',
+    shower: 'c10b1583-2b46-432a-b8a7-162fdb288178',  // 250x80
+    // shower: '2439a58a-8b1c-4917-8c5c-d8b2d1f0f243',
     suck: '4842d1ea-ae15-411b-a41c-1eda7bd85ce4',
     // weed: '7df8979a-1b66-49e0-905d-7bbddd242f6e',
     // weed: 'accbe726-1503-4fdc-94fa-3d5e4fcd537f',
@@ -145,19 +201,22 @@ cb.onDrawPanel(function (user) {
 
     var layers = [];
     var i;
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < textLayers; i++) {
         var text = '';
         switch(i) {
             case 0:
-                text = cb.settings.panelText3;
+                text = cb.settings.panelText4;
                 break;
             case 1:
-                text = cb.settings.panelText2;
+                text = cb.settings.panelText3;
                 break;
             case 2:
+                text = cb.settings.panelText2;
+                break;
+            case 3:
                 text = cb.settings.panelText1;
                 break;
-            }
+                }
         layers.push({
             'type': 'text',
             'text': text,
