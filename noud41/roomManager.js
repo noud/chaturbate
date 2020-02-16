@@ -4,16 +4,24 @@
  * Author: noud41
  */
 
+const panelTextColorDefaultValue = 'green';
+
 cb.settings_choices = [
-    {name: 'room', type: 'str', label: 'Room title'},
+    {name: 'room', type: 'str', minLength: 1, maxLength: 270, label: 'Room title'},
     {name: 'panelImage', type: 'str', label: 'Panel image'},
     {name: 'panelText1', type: 'str', label: 'Panel text 1'},
     {name: 'panelText2', type: 'str', label: 'Panel text 2'},
     {name: 'panelText3', type: 'str', label: 'Panel text 3'},
-    {name: 'panelTextColor', type: 'str', label: 'Panel text color'},
-    {name: 'panelTextTop', type: 'str', label: 'Panel text top'},
-    {name: 'panelTextLeft', type: 'str', label: 'Panel text left'},
-    {name: 'panelTextFontSize', type: 'str', label: 'Panel text font size'}
+    {name: 'panelTextColor', type:'choice',
+        choice1: 'yellow',
+        choice2: 'red',
+        choice3: panelTextColorDefaultValue,
+        choice4: 'black',
+        defaultValue: panelTextColorDefaultValue
+    },
+    {name: 'panelTextTop', type: 'int', minValue: 0, maxValue: 100, defaultValue: 48, label: 'Panel text top'},
+    {name: 'panelTextLeft', type: 'int', minValue: 0, maxValue: 270, defaultValue: 100, label: 'Panel text left'},
+    {name: 'panelTextFontSize', type: 'int', label: 'Panel text font size'}
 ];
 
 var images = {
