@@ -12,7 +12,7 @@
 /room title
 
 /panel
-/panel_image [ass|brb|fuck|hello|kisses|what|wink]
+/panel_image [ass|brb|fuck|hello|kisses|suck|what|wink]
 /panel_text_1 anyStartingText
 /panel_text_2 anyMoreText
 /panel_text_3 anyEndingText

@@ -18,8 +18,9 @@ cb.settings_choices = [
         choice3: panelImageDefaultValue,
         choice4: 'hello',
         choice5: 'kisses',
-        choice6: 'what',
-        choice7: 'wink',
+        choice6: 'suck',
+        choice7: 'what',
+        choice8: 'wink',
         defaultValue: panelImageDefaultValue
     },
     {name: 'panelText1', type: 'str', label: 'Panel text 1'},
@@ -43,6 +44,7 @@ var images = {
     fuck: '90284acc-63cc-440a-b4b1-600f7cce31c0',
     hello: 'a0ecf610-7516-41eb-9f1c-ebdc7feec449',
     kisses: 'a78c3fa9-4091-4a53-929e-8754b814d97a',
+    suck: '4842d1ea-ae15-411b-a41c-1eda7bd85ce4',
     what: '56e5c9fe-8671-48dd-80be-c7aa885fd694',
     wink: 'b222730f-7983-48ae-80fc-4f2c20c7936c'
 };
@@ -61,6 +63,9 @@ cb.onDrawPanel(function (user) {
             break;
         case 'kisses':
             image = images.kisses;
+            break;
+        case 'suck':
+            image = images.suck;
             break;
         case 'what':
             image = images.what;
