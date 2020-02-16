@@ -53,7 +53,7 @@ const panelTextLeftMax = panelLeftMax;
 
 cb.settings_choices = [
     // Room
-    {name: 'room', type: 'str', minLength: 0, maxLength: 70, label: 'Room title'},
+    {name: 'room', type: 'str', minLength: 1, maxLength: 70, label: 'Room title'},
     // onHandles
     {name: 'enterMessage', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'Enter message'},
     {name: 'enterColor', type:'choice', label: 'Enter color',
@@ -80,9 +80,10 @@ cb.settings_choices = [
         choice3: panelImageDefaultValue,
         choice4: 'hello',
         choice5: 'kisses',
-        choice6: 'suck',
-        choice7: 'what',
-        choice8: 'wink',
+        choice6: 'shower',
+        choice7: 'suck',
+        choice8: 'what',
+        choice9: 'wink',
         defaultValue: panelImageDefaultValue
     },
     {name: 'panelImageLeft', type: 'int', minValue: panelImageTopMin, maxValue: panelImageTopMax, defaultValue: 0, label: 'Panel image left'},
@@ -112,6 +113,7 @@ var images = {
     fuck: '90284acc-63cc-440a-b4b1-600f7cce31c0',
     hello: 'a0ecf610-7516-41eb-9f1c-ebdc7feec449',
     kisses: 'a78c3fa9-4091-4a53-929e-8754b814d97a',
+    shower: '7307c83b-7c10-44c5-881a-dd90ffb7977b',
     suck: '4842d1ea-ae15-411b-a41c-1eda7bd85ce4',
     // weed: '7df8979a-1b66-49e0-905d-7bbddd242f6e',
     // weed: 'accbe726-1503-4fdc-94fa-3d5e4fcd537f',
@@ -121,6 +123,7 @@ var images = {
 };
 
 cb.onDrawPanel(function (user) {
+    const image = images[cb.settings.panelImage];
     const color = cb.settings.panelTextColor;
     const fontSize = cb.settings.panelTextFontSize;
     const fontSpacing = cb.settings.panelTextFontSpacing;
@@ -134,38 +137,36 @@ cb.onDrawPanel(function (user) {
 
     const imageLayer = {
         'type': 'image',
-        'fileID': images[cb.settings.panelImage],
+        'fileID': image,
         'left':  cb.settings.panelImageLeft,
         'top': cb.settings.panelImageTop,
         'opacity': cb.settings.panelImageOpacity
     };
 
-    var layers = [
-        {
+    var layers = [];
+    var i;
+    for (i = 0; i < 3; i++) {
+        var text = '';
+        switch(i) {
+            case 0:
+                text = cb.settings.panelText3;
+                break;
+            case 1:
+                text = cb.settings.panelText2;
+                break;
+            case 2:
+                text = cb.settings.panelText1;
+                break;
+            }
+        layers.push({
             'type': 'text',
-            'text': cb.settings.panelText1,
-            'top': top - (fontSpacing * 2),
+            'text': text,
+            'top': top - (fontSpacing * i),
             'left': left,
             'font-size': fontSize,
             'color': color,
-        },
-        {
-            'type': 'text',
-            'text': cb.settings.panelText2,
-            'top': top - fontSpacing,
-            'left': left,
-            'font-size': fontSize,
-            'color': color,
-        },
-        {
-            'type': 'text',
-            'text': cb.settings.panelText3,
-            'left': left,
-            'top': top,
-            'font-size': fontSize,
-            'color': color,
-        },
-    ];
+        });
+    }
     layers.unshift(imageLayer);
 
     const panel = {
