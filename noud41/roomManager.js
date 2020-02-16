@@ -33,6 +33,7 @@ const colorCodeBlue = '#0000FF';
 // Chat
 
 const chatTextMaxLength = 270;
+const wordSeparator = " ";
 
 // Panel
 
@@ -94,7 +95,7 @@ cb.settings_choices = [
 
     // Room
 
-    {name: 'room', type: 'str', minLength: 1, maxLength: 70, label: 'Room title'},
+    {name: 'room', type: 'str', minLength: 1, maxLength: 70, label: 'RoomSubject'},
 
     // onHandles
 
@@ -289,12 +290,12 @@ cb.onLeave(function (user) {
 });
 
 cb.onMessage(function (msg) {
-    const params = getParams(msg['m']);
+    var params = getParams(msg['m']);
 
     if (msg['user'] == cb.room_slug) {
         if (msg['m'].match(/\/changeRoomSubject/i)) {
-            cb.changeRoomSubject(params)
             cb.settings.room = params;
+            cb.changeRoomSubject(params)
         }
 
         if (msg['m'].match(/\/limitCam_start/i)) {
@@ -329,20 +330,24 @@ cb.onMessage(function (msg) {
             cb.settings.leaveColor = params;
         }
 
+        if (msg['m'].match(/\/drawPanelTextColor/i)) {
+            cb.settings.panelTextColor = params;
+        }
+
         if (msg['m'].match(/\/drawPanelText/i)) {
-            var line = params.pop;
-            var params = getParams(params);
+            const line = getFirstParam(params);
+            params = getParams(params);
             switch(line) {
-                case 1:
+                case '1':
                     cb.settings.panelText1 = params;
                     break;
-                case 2:
+                case '2':
                     cb.settings.panelText2 = params;
                     break;
-                case 3:
+                case '3':
                     cb.settings.panelText3 = params;
                     break;
-                case 4:
+                case '4':
                     cb.settings.panelText4 = params;
                     break;
             }
@@ -368,10 +373,14 @@ function getUserName(user) {
 };
 
 function getParams(message) {
-    const separator = " ";
-    var messageArray = message.split(separator);
+    var messageArray = message.split(wordSeparator);
     messageArray.shift();
-    return messageArray.join(separator);
+    return messageArray.join(wordSeparator);
+};
+
+function getFirstParam(message) {
+    var messageArray = message.split(wordSeparator);
+    return messageArray[0];
 };
 
 function advertise() {
