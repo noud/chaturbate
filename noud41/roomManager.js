@@ -12,7 +12,7 @@ cb.settings_choices = [
     {name: 'panelText1', type: 'str', label: 'Panel text 1'},
     {name: 'panelText2', type: 'str', label: 'Panel text 2'},
     {name: 'panelText3', type: 'str', label: 'Panel text 3'},
-    {name: 'panelTextColor', type:'choice',
+    {name: 'panelTextColor', type:'choice', label: 'Panel text color',
         choice1: 'yellow',
         choice2: 'red',
         choice3: panelTextColorDefaultValue,
@@ -26,6 +26,7 @@ cb.settings_choices = [
 
 var images = {
     brb: '96349a24-b717-4a3d-aca1-46ea1cd6b5cb',
+    fuck: '90284acc-63cc-440a-b4b1-600f7cce31c0',
     kisses: 'a78c3fa9-4091-4a53-929e-8754b814d97a',
     what: '56e5c9fe-8671-48dd-80be-c7aa885fd694',
     wink: 'b222730f-7983-48ae-80fc-4f2c20c7936c'
@@ -36,10 +37,13 @@ cb.onDrawPanel(function (user) {
     switch(cb.settings.panelImage) {
         case 'brb':
             image = images.brb;
-          break;
+            break;
+        case 'fuck':
+            image = images.fuck;
+            break;
         case 'kisses':
             image = images.kisses;
-          break;
+            break;
         case 'what':
             image = images.what;
             break;
