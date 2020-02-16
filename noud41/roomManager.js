@@ -126,6 +126,10 @@ cb.onMessage(function (msg) {
         if (msg['m'].match(/\/panel_image/i)) {
             cb.settings.panelImage = params;
         }
+        if (msg['m'].match(/\/panel_text_color/i)) {
+            cb.settings.panelTextColor = params;
+        }
+
         // @todo clean this
         if (msg['m'].match(/\/panel_text_1/i)) {
             cb.settings.panelText1 = params;

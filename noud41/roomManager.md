@@ -15,6 +15,7 @@
 /panel_text_1 anyStartingText
 /panel_text_2 anyMoreText
 /panel_text_3 anyEndingText
+/panel_text_color green
 /cam_limit awayMessage
 /cam_unlimit
 ```
