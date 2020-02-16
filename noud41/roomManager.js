@@ -56,7 +56,6 @@ cb.onDrawPanel(function (user) {
     // const imageMargin = 150;
     // const left = cb.settings.panelTextLeft + imageMargin;
 
-
     return {
         "template": "image_template",
         "layers": [
@@ -152,6 +151,8 @@ function getUserName(user) {
     return userName.replace(/_+$/,'');
 };
 
+// @todo clean this
+
 function getPanelText1() {
     // @todo limit to 27 chars
     // let's code and love black d
@@ -159,7 +160,6 @@ function getPanelText1() {
     return panelText1;
 };
 
-// @todo clean this
 function getPanelText2() {
     // @todo limit to 27 chars
     // let's code and love black d
@@ -187,17 +187,9 @@ function advertise() {
 }
 
 function showAppAd(username) {
-    // var msg = "welcome to have you on board";
-    // msg += "Type \"/say talk\" to talk.";
-    // msg += "Type \"/flash\" to flash.";
-    // cb.sendNotice(msg, username, '', '#15A6B0', 'bold');
 }
 
 function init() {
     cb.changeRoomSubject(cb.settings.room);
-    // advertise();
-    //  cb.settings.tokens
-    const roomSubject = 'room';
-    cb.changeRoomSubject(roomSubject);
 }
 init();
