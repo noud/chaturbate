@@ -5,10 +5,18 @@
  */
 
 const panelTextColorDefaultValue = 'green';
+const panelImageDefaultValue = 'fuck';
 
 cb.settings_choices = [
     {name: 'room', type: 'str', minLength: 1, maxLength: 270, label: 'Room title'},
-    {name: 'panelImage', type: 'str', label: 'Panel image'},
+    {name: 'panelImage', type:'choice', label: 'Panel image',
+        choice1: 'brb',
+        choice2: panelImageDefaultValue,
+        choice3: 'kisses',
+        choice4: 'what',
+        choice5: 'wink',
+        defaultValue: panelImageDefaultValue
+    },
     {name: 'panelText1', type: 'str', label: 'Panel text 1'},
     {name: 'panelText2', type: 'str', label: 'Panel text 2'},
     {name: 'panelText3', type: 'str', label: 'Panel text 3'},
