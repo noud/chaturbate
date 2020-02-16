@@ -4,6 +4,8 @@
  * Author: noud41
  */
 
+const colorCode = '#008000';
+
 const panelTextColorDefaultValue = 'green';
 const panelImageDefaultValue = 'fuck';
 
@@ -118,12 +120,12 @@ cb.onDrawPanel(function (user) {
 
 cb.onEnter(function (user) {
     const userName = getUserName(user['user']);
-    cb.chatNotice('Hoi welcome ' + userName + '! (be fun)');
+    cb.chatNotice('Hoi welcome ' + userName + '! (be fun)', null, null, colorCode);
 });
 
 cb.onLeave(function (user) {
     const userName = getUserName(user['user']);
-    cb.chatNotice('Houdoe bye ' + userName + '! (be fun)');
+    cb.chatNotice('Houdoe bye ' + userName + '! (be fun)', null, null, colorCode);
 });
 
 cb.onMessage(function (msg) {
