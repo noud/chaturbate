@@ -20,3 +20,7 @@
 ```
 
 ## [app details](https://chaturbate.com/apps/app_details/roommanager/?version=&slot=0)
+
+Girls are you able to test-drive? Give it a few minutes.
+
+## [issues](https://github.com/noud/chaturbate/issues) and ideas
