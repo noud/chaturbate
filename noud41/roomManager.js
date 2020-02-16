@@ -4,9 +4,11 @@
  * Author: noud41
  * Readme: https://github.com/noud/chaturbate/blob/master/noud41/roomManager.md
  */
-
  
-// The 17 standard colors are:
+// CSS v1
+
+// 17 standard colors
+
 const colorAqua = 'aqua';
 const colorBlack = ' black';
 const colorBlue = 'blue';
@@ -28,21 +30,40 @@ const colorYellow = 'yellow';
 const colorCodeGreen = '#008000';
 const colorCodeBlue = '#0000FF';
 
+// Chat
+
+const chatTextMaxLength = 270;
+
 // Panel
 
-const panelImageDefaultValue = 'fuck';
+const panelImageDefaultValue = 'hello';
+
+// Panel image
+
+const imageMax = 9;
+const imagefileIDMax = 44;
+
+// fileID is Filename on the web
+
+const image1fileIDDefaultValue = '6735e182-6178-46a1-a7cf-79c0ea86fa77';
+const image2fileIDDefaultValue = '96349a24-b717-4a3d-aca1-46ea1cd6b5cb';
+const image3fileIDDefaultValue = '90284acc-63cc-440a-b4b1-600f7cce31c0';
+const image4fileIDDefaultValue = 'a0ecf610-7516-41eb-9f1c-ebdc7feec449';
+const image5fileIDDefaultValue = 'a78c3fa9-4091-4a53-929e-8754b814d97a';
+// 250x80
+const image6fileIDDefaultValue = 'c10b1583-2b46-432a-b8a7-162fdb288178';
+// full: '2439a58a-8b1c-4917-8c5c-d8b2d1f0f243',
+const image7fileIDDefaultValue = '4842d1ea-ae15-411b-a41c-1eda7bd85ce4';
+const image8fileIDDefaultValue = '56e5c9fe-8671-48dd-80be-c7aa885fd694';
+const image9fileIDDefaultValue = 'b222730f-7983-48ae-80fc-4f2c20c7936c';
 
 const textLayers = 4;
 const panelText1 = 'so';
 const panelText2 = 'nice';
 const panelText3 = 'code loves';
-const panelText4 = 'https://github.com/noud/chaturbate';
+const panelText4 = 'github.com/noud/chaturbate';
 
 const panelTextColorDefaultValue = colorGreen;
-
-// Chat
-
-const chatTextMaxLength = 270;
 
 // Panel 270 X 69 pixels
 
@@ -60,6 +81,8 @@ const panelImageTopMax = panelTopMax;
 const panelImageLeftMin = panelLeftMin;
 const panelImageLeftMax = panelLeftMax;
 
+// Panel TextMax 27
+
 const panelTextMax = 27;
 
 const panelTextTopMin = panelTopMin;
@@ -68,9 +91,13 @@ const panelTextLeftMin = panelLeftMin;
 const panelTextLeftMax = panelLeftMax;
 
 cb.settings_choices = [
+
     // Room
+
     {name: 'room', type: 'str', minLength: 1, maxLength: 70, label: 'Room title'},
+
     // onHandles
+
     {name: 'enterMessage', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'Enter message'},
     {name: 'enterColor', type:'choice', label: 'Enter color',
         choice1: colorAqua,
@@ -113,12 +140,15 @@ cb.settings_choices = [
         choice17: colorYellow,
         defaultValue: colorCodeBlue
     },
+
     // Panel
+
     // Panel Image
+
     {name: 'panelImage', type:'choice', label: 'Panel image',
         choice1: 'ass',
         choice2: 'brb',
-        choice3: panelImageDefaultValue,
+        choice3: 'fuck',
         choice4: 'hello',
         choice5: 'kisses',
         choice6: 'shower',
@@ -129,8 +159,10 @@ cb.settings_choices = [
     },
     {name: 'panelImageLeft', type: 'int', minValue: panelImageTopMin, maxValue: panelImageTopMax, defaultValue: 0, label: 'Panel image left'},
     {name: 'panelImageTop', type: 'int', minValue: panelImageLeftMin, maxValue: panelImageLeftMax, defaultValue: 0, label: 'Panel image top'},
-    {name: 'panelImageOpacity', type: 'int', minValue: 0, maxValue: 1, defaultValue: 1, label: 'Panel image opacity'},  // @todo double
+    {name: 'panelImageOpacity', type: 'int', minValue: 0, maxValue: 1, defaultValue: 1, label: 'Panel image opacity'},
+
     // Panel Text
+
     {name: 'panelText1', defaultValue: panelText1, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 1'},
     {name: 'panelText2', defaultValue: panelText2, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 2'},
     {name: 'panelText3', defaultValue: panelText3, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 3'},
@@ -158,27 +190,38 @@ cb.settings_choices = [
     {name: 'panelTextLeft', type: 'int', minValue: panelTextTopMin, maxValue: panelTextTopMax, defaultValue: 0, label: 'Panel text left'},
     {name: 'panelTextTop', type: 'int', minValue: panelTextLeftMin, maxValue: panelTextLeftMax, defaultValue: 0, label: 'Panel text top'},
     {name: 'panelTextFontSize', type: 'int', label: 'Panel text font size'},
+
+    // Panel image fileIDs
+
+    {name: 'image1fileID', defaultValue: image1fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 1'},
+    {name: 'image2fileID', defaultValue: image2fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 2'},
+    {name: 'image3fileID', defaultValue: image3fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 3'},
+    {name: 'image4fileID', defaultValue: image4fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 4'},
+    {name: 'image5fileID', defaultValue: image5fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 5'},
+    {name: 'image6fileID', defaultValue: image6fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 6'},
+    {name: 'image7fileID', defaultValue: image7fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 7'},
+    {name: 'image8fileID', defaultValue: image8fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 8'},
+    {name: 'image9fileID', defaultValue: image9fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 9'},
+
     // design
-    {name: 'panelTextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 24, label: 'Panel text font spacing'}
+
+    {name: 'panelTextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 12, label: 'Panel text font spacing'},
 ];
 
-var images = {
-    ass: '6735e182-6178-46a1-a7cf-79c0ea86fa77',
-    brb: '96349a24-b717-4a3d-aca1-46ea1cd6b5cb',
-    fuck: '90284acc-63cc-440a-b4b1-600f7cce31c0',
-    hello: 'a0ecf610-7516-41eb-9f1c-ebdc7feec449',
-    kisses: 'a78c3fa9-4091-4a53-929e-8754b814d97a',
-    shower: 'c10b1583-2b46-432a-b8a7-162fdb288178',  // 250x80
-    // shower: '2439a58a-8b1c-4917-8c5c-d8b2d1f0f243',
-    suck: '4842d1ea-ae15-411b-a41c-1eda7bd85ce4',
-    // weed: '7df8979a-1b66-49e0-905d-7bbddd242f6e',
-    // weed: 'accbe726-1503-4fdc-94fa-3d5e4fcd537f',
-    weed: 'ee7eee18-caee-425f-8502-fbb9d7fae342',
-    what: '56e5c9fe-8671-48dd-80be-c7aa885fd694',
-    wink: 'b222730f-7983-48ae-80fc-4f2c20c7936c'
-};
-
 cb.onDrawPanel(function (user) {
+    // @todo make variable
+    var images = {
+        ass: cb.settings.image1fileID,
+        brb: cb.settings.image2fileID,
+        fuck: cb.settings.image3fileID,
+        hello: cb.settings.image4fileID,
+        kisses: cb.settings.image5fileID,
+        shower: cb.settings.image6fileID,
+        suck: cb.settings.image7fileID,
+        what: cb.settings.image8fileID,
+        wink: cb.settings.image9fileID
+    };
+
     const image = images[cb.settings.panelImage];
     const color = cb.settings.panelTextColor;
     const fontSize = cb.settings.panelTextFontSize;
@@ -216,7 +259,7 @@ cb.onDrawPanel(function (user) {
             case 3:
                 text = cb.settings.panelText1;
                 break;
-                }
+        }
         layers.push({
             'type': 'text',
             'text': text,
@@ -229,7 +272,7 @@ cb.onDrawPanel(function (user) {
     layers.unshift(imageLayer);
 
     const panel = {
-        "template": "image_template",
+        "template": "image_template",   // @todo variable
         "layers": layers,
       };
       return panel;
@@ -238,65 +281,71 @@ cb.onDrawPanel(function (user) {
 // onHandles
 
 cb.onEnter(function (user) {
-    const userName = getUserName(user['user']);
-    cb.chatNotice(cb.settings.enterMessage.replace('<userName>', userName), null, null, cb.settings.enterColor);
+    chatNotice(cb.settings.enterMessage, user['user'], cb.settings.enterColor)
 });
 
 cb.onLeave(function (user) {
-    const userName = getUserName(user['user']);
-    cb.chatNotice(cb.settings.leaveMessage.replace('<userName>', userName), null, null, cb.settings.leaveColor);
+    chatNotice(cb.settings.leaveMessage, user['user'], cb.settings.leaveColor)
 });
 
 cb.onMessage(function (msg) {
     const params = getParams(msg['m']);
 
     if (msg['user'] == cb.room_slug) {
-        if (msg['m'].match(/\/room/i)) {
+        if (msg['m'].match(/\/changeRoomSubject/i)) {
             cb.changeRoomSubject(params)
             cb.settings.room = params;
         }
 
-        if (msg['m'].match(/\/cam_limit/i)) {
+        if (msg['m'].match(/\/limitCam_start/i)) {
             cb.limitCam_start(params);
         }
-
-        if (msg['m'].match(/\/cam_unlimit/i)) {
+        if (msg['m'].match(/\/limitCam_stop/i)) {
             cb.limitCam_stop();
         }
         
-        if (msg['m'].match(/\/panel/i)) {
+        if (msg['m'].match(/\/drawPanel/i)) {
             cb.drawPanel();
         }
 
-        if (msg['m'].match(/\/panel_image/i)) {
+        if (msg['m'].match(/\/drawPanelImage/i)) {
             cb.settings.panelImage = params;
         }
-        if (msg['m'].match(/\/panel_text_color/i)) {
+
+        if (msg['m'].match(/\/drawPanelTextColor/i)) {
             cb.settings.panelTextColor = params;
         }
 
-        if (msg['m'].match(/\/on_enter_message/i)) {
+        if (msg['m'].match(/\/onEnterText/i)) {
             cb.settings.enterMessage = params;
         }
-        if (msg['m'].match(/\/on_enter_color/i)) {
+        if (msg['m'].match(/\/onEnterColor/i)) {
             cb.settings.enterColor = params;
         }
-        if (msg['m'].match(/\/on_leave_message/i)) {
+        if (msg['m'].match(/\/onLeaveText/i)) {
             cb.settings.leaveMessage = params;
         }
-        if (msg['m'].match(/\/on_leave_color/i)) {
+        if (msg['m'].match(/\/onLeaveColor/i)) {
             cb.settings.leaveColor = params;
         }
 
-        // @todo clean this
-        if (msg['m'].match(/\/panel_text_1/i)) {
-            cb.settings.panelText1 = params;
-        }
-        if (msg['m'].match(/\/panel_text_2/i)) {
-            cb.settings.panelText2 = params;
-        }
-        if (msg['m'].match(/\/panel_text_3/i)) {
-            cb.settings.panelText3 = params;
+        if (msg['m'].match(/\/drawPanelText/i)) {
+            var line = params.pop;
+            var params = getParams(params);
+            switch(line) {
+                case 1:
+                    cb.settings.panelText1 = params;
+                    break;
+                case 2:
+                    cb.settings.panelText2 = params;
+                    break;
+                case 3:
+                    cb.settings.panelText3 = params;
+                    break;
+                case 4:
+                    cb.settings.panelText4 = params;
+                    break;
+            }
         }
     }
 });
@@ -307,6 +356,11 @@ cb.onTip(function (tip) {
 });
 
 // utility
+
+function chatNotice(message, user) {
+    const userName = getUserName(user);
+    cb.chatNotice(message.replace('<userName>', userName), null, null, cb.settings.enterColor);
+}
 
 function getUserName(user) {
     userName = user.replace(/\d+$/, '');

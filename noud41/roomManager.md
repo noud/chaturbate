@@ -10,25 +10,35 @@
 ## chat commands
 
 ```
-/room title
+/changeRoomSubject new_subject
 
-/cam_limit awayMessage
-/cam_unlimit
+/onEnterText anyMessage with <userName>
+/onEnterColor [yellow|red|green|blue|black]
 
-/on_enter_message anyMessage with <userName>
-/on_enter_color [yellow|red|green|blue|black]
+/onLeaveText anyMessage with <userName>
+/onLeaveColor [yellow|red|green|blue|black]
 
-/on_leave_message anyMessage with <userName>
-/on_leave_color [yellow|red|green|blue|black]
+/limitCam_start awayMessage
+/limitCam_stop
 
-/panel
-/panel_image [ass|brb|fuck|hello|kisses|suck|what|wink]
-/panel_text_1 anyStartingText
-/panel_text_2 anyMoreText
-/panel_text_3 anyMoreMoreText
-/panel_text_4 anyEndingText
-/panel_text_color [yellow|red|green|blue|black]
+/drawPanel
+/drawPanelTemplate image_template
+
+/drawPanelImageTop 5
+/drawPanelImageLeft 61
+/drawPanelImage [ass|brb|fuck|hello|kisses|shower|suck|what|wink]
+/drawPanelImageTop 5
+/drawPanelImageLeft 61
+
+/drawPanelTextColor [yellow|red|green|blue|black]
+/drawPanelText 1 anyStartingText
+/drawPanelText 2 anyMoreText
+/drawPanelText 3 anyMoreMoreText
+/drawPanelText 4 anyEndingText
 ```
+## Launch App
+
+![Launch App](./doc/Launch_App.png?raw=true "Launch App")
 
 ## [app details](https://chaturbate.com/apps/app_details/roommanager/?version=&slot=0)
 
