@@ -33,13 +33,31 @@ const colorYellow = 'yellow';
 
 // 250x80
 const fileID_Ass = '6735e182-6178-46a1-a7cf-79c0ea86fa77';
-const fileID_Brb = '96349a24-b717-4a3d-aca1-46ea1cd6b5cb';
-const fileID_Fuck = '90284acc-63cc-440a-b4b1-600f7cce31c0';
-const fileID_Hello = 'a0ecf610-7516-41eb-9f1c-ebdc7feec449';
-const fileID_Kisses = 'a78c3fa9-4091-4a53-929e-8754b814d97a';
-const fileID_Shower = 'c10b1583-2b46-432a-b8a7-162fdb288178';
-const fileID_Suck = '4842d1ea-ae15-411b-a41c-1eda7bd85ce4';
-const fileID_What = '56e5c9fe-8671-48dd-80be-c7aa885fd694';
+const fileID_BabyTipMenu = 'ef10ae98-2776-4d3d-b655-1f7565e5e8d8';
+const fileID_Bienvenidos = '83426c6f-e5f7-4917-8860-ef082b756a42￼';
+const fileID_Brb = 'ebf0ae98-d6a6-43a7-9eef-48e5ddfb590e';
+const fileID_Bye = '57bfc63b-e696-474a-9e91-3e458c3bf269';
+const fileID_Fuck = 'd9a19f5a-fde1-43f6-96d7-d312b189103a';
+const fileID_Girl = '48ccd525-0514-4833-acd0-0e51c79d7e6f';
+const fileID_GoodBye = '99558b49-a648-4b0a-b00b-320a00d7024b';
+const fileID_Heart = '8fb2f2b0-b890-4035-bcb2-fc54f98ec881';
+const fileID_Hello = 'b9099f3a-78c0-4565-9230-1eefe1345622';
+const fileID_Homer = 'c91a4a00-e58f-4b89-9a76-6b65f10f4252';
+const fileID_IfYouLikeThisShow = 'c4eea5a0-7627-4103-9e66-4c68c8099730';
+const fileID_Kisses = 'a99ecf0f-ba69-4ff2-b989-f7556784c365';
+const fileID_Kitten = 'b213b6cd-097d-40ea-be6f-9b37285edf52';
+const fileID_Pole = 'dd2d7e7c-8cd8-4046-a3f2-6196002c3c32';
+const fileID_QueRico = 'f2742abd-dc97-4351-912a-6ab74e8d3587';
+const fileID_SheIsAPrincess = 'f13ab329-d8f6-47d2-8f76-bd38e4a19b8c';
+const fileID_Shower = 'd23a6508-1976-4002-bbd0-2d28d140ecdf';
+const fileID_SpankFat = 'ce511e47-8ad8-4d4b-88cb-f1954e6c2c43';
+const fileID_SpankingFemales = 'eb3f7424-8315-4cf1-a697-1d7049877ada';
+const fileID_Stars = 'bed20a4e-ec0a-47d7-9bd9-93f65114c9a2';
+const fileID_Suck = 'cff21971-9744-41d1-ab12-74e3341e75ac';
+const fileID_TipIfYouLikeHer = 'e67f518b-8a8b-4237-ab2b-6634939d42e1';
+const fileID_Welcome = '74fd93b9-518e-41ef-8ffd-3f07ad2e40b6';
+const fileID_WelcomeBackBeautiful = 'e12663f0-8600-4e68-af58-9456c882f82b';
+const fileID_What = 'e10ed8ee-f981-4062-beda-bae1ee306b9d';
 const fileID_Wink = 'b222730f-7983-48ae-80fc-4f2c20c7936c';
 
 const fullID_Shower = '2439a58a-8b1c-4917-8c5c-d8b2d1f0f243';
@@ -155,14 +173,32 @@ cb.settings_choices = [
 
     {name: 'onDrawPanel_Image', type:'choice', label: 'onDrawPanel image',
         choice1: 'ass',
-        choice2: 'brb',
-        choice3: 'fuck',
-        choice4: 'hello',
-        choice5: 'kisses',
-        choice6: 'shower',
-        choice7: 'suck',
-        choice8: 'what',
-        choice9: 'wink',
+        choice2: 'babyTipMenu',
+        choice3: 'bienvenidos',
+        choice4: 'brb',
+        choice5: 'bye',
+        choice6: 'fuck',
+        choice7: 'girl',
+        choice8: 'goodBye',
+        choice9: 'heart',
+        choice10: 'hello',
+        choice11: 'homer',
+        choice12: 'ifYouLikeThisShow',
+        choice13: 'kisses',
+        choice14: 'kitten',
+        choice15: 'pole',
+        choice16: 'queRico',
+        choice17: 'sheIsAPrincess',
+        choice18: 'shower',
+        choice19: 'spankFat',
+        choice20: 'spankingFemales',
+        choice21: 'stars',
+        choice22: 'suck',
+        choice23: 'tipIfYouLikeHer',
+        choice24: 'welcome',
+        choice25: 'welcomeBackBeautiful',
+        choice26: 'what',
+        choice27: 'wink',
         defaultValue: panelImageDefaultValue
     },
     {name: 'onDrawPanel_ImageLeft', type: 'int', minValue: panelImageTopMin, maxValue: panelImageTopMax, defaultValue: 0, label: 'onDrawPanel image left'},
@@ -171,10 +207,10 @@ cb.settings_choices = [
 
     // onDrawPanel Text
 
-    {name: 'onDrawPanel_Text1', defaultValue: panelText1, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 1'},
-    {name: 'onDrawPanel_Text2', defaultValue: panelText2, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 2'},
-    {name: 'onDrawPanel_Text3', defaultValue: panelText3, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 3'},
-    {name: 'onDrawPanel_Text4', defaultValue: panelText4, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 4'},
+    {name: 'onDrawPanel_Text1', defaultValue: panelText1, type: 'str', minLength: 1, maxLength: panelTextMax, label: 'onDrawPanel text 1'},
+    {name: 'onDrawPanel_Text2', defaultValue: panelText2, type: 'str', minLength: 1, maxLength: panelTextMax, label: 'onDrawPanel text 2'},
+    {name: 'onDrawPanel_Text3', defaultValue: panelText3, type: 'str', minLength: 1, maxLength: panelTextMax, label: 'onDrawPanel text 3'},
+    {name: 'onDrawPanel_Text4', defaultValue: panelText4, type: 'str', minLength: 1, maxLength: panelTextMax, label: 'onDrawPanel text 4'},
     {name: 'onDrawPanel_TextColor', type:'choice', label: 'onDrawPanel text color',
         choice1: colorAqua,
         choice2: colorBlack,
@@ -207,12 +243,30 @@ cb.settings_choices = [
 cb.onDrawPanel(function (user) {
     var images = {
         ass: fileID_Ass,
+        babyTipMenu: fileID_BabyTipMenu,
+        bienvenidos: fileID_Bienvenidos,
         brb: fileID_Brb,
+        bye: fileID_Bye,
         fuck: fileID_Fuck,
+        girl: fileID_Girl,
+        goodBye: fileID_GoodBye,
+        heart: fileID_Heart,
         hello: fileID_Hello,
+        homer: fileID_Homer,
+        ifYouLikeThisShow: fileID_IfYouLikeThisShow,
         kisses: fileID_Kisses,
+        kitten: fileID_Kitten,
+        pole: fileID_Pole,
+        queRico: fileID_QueRico,
+        sheIsAPrincess: fileID_SheIsAPrincess,
         shower: fileID_Shower,
+        spankFat: fileID_SpankFat,
+        spankingFemales: fileID_SpankingFemales,
+        stars: fileID_Stars,
         suck: fileID_Suck,
+        tipIfYouLikeHer: fileID_TipIfYouLikeHer,
+        welcome: fileID_Welcome,
+        welcomeBackBeautiful: fileID_WelcomeBackBeautiful,
         what: fileID_What,
         wink: fileID_Wink
     };
