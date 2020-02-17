@@ -35,6 +35,8 @@ const colorCodeBlue = '#0000FF';
 const chatTextMaxLength = 270;
 const wordSeparator = " ";
 
+const templateUserName = '<userName>';
+
 // Panel
 
 const panelImageDefaultValue = 'hello';
@@ -95,12 +97,12 @@ cb.settings_choices = [
 
     // Room
 
-    {name: 'room', type: 'str', minLength: 1, maxLength: 70, label: 'RoomSubject'},
+    {name: 'subject', type: 'str', minLength: 1, maxLength: 70, label: 'RoomSubject'},
 
     // onHandles
 
-    {name: 'enterMessage', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'Enter message'},
-    {name: 'enterColor', type:'choice', label: 'Enter color',
+    {name: 'onEnter_Text', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'onEnter text'},
+    {name: 'onEnter_Color', type:'choice', label: 'onEnter color',
         choice1: colorAqua,
         choice2: colorBlack,
         choice3: colorBlue,
@@ -120,8 +122,8 @@ cb.settings_choices = [
         choice17: colorYellow,
         defaultValue: colorCodeGreen
     },
-    {name: 'leaveMessage', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'Leave message'},
-    {name: 'leaveColor', type:'choice', label: 'Leave color',
+    {name: 'onLeave_Text', type: 'str', minLength: 0, maxLength: chatTextMaxLength, label: 'onLeave text'},
+    {name: 'onLeave_Color', type:'choice', label: 'onLeave color',
         choice1: colorAqua,
         choice2: colorBlack,
         choice3: colorBlue,
@@ -142,11 +144,11 @@ cb.settings_choices = [
         defaultValue: colorCodeBlue
     },
 
-    // Panel
+    // onDrawPanel
 
-    // Panel Image
+    // onDrawPanel Image
 
-    {name: 'panelImage', type:'choice', label: 'Panel image',
+    {name: 'onDrawPanel_Image', type:'choice', label: 'onDrawPanel image',
         choice1: 'ass',
         choice2: 'brb',
         choice3: 'fuck',
@@ -158,17 +160,17 @@ cb.settings_choices = [
         choice9: 'wink',
         defaultValue: panelImageDefaultValue
     },
-    {name: 'panelImageLeft', type: 'int', minValue: panelImageTopMin, maxValue: panelImageTopMax, defaultValue: 0, label: 'Panel image left'},
-    {name: 'panelImageTop', type: 'int', minValue: panelImageLeftMin, maxValue: panelImageLeftMax, defaultValue: 0, label: 'Panel image top'},
-    {name: 'panelImageOpacity', type: 'int', minValue: 0, maxValue: 1, defaultValue: 1, label: 'Panel image opacity'},
+    {name: 'onDrawPanel_ImageLeft', type: 'int', minValue: panelImageTopMin, maxValue: panelImageTopMax, defaultValue: 0, label: 'onDrawPanel image left'},
+    {name: 'onDrawPanel_ImageTop', type: 'int', minValue: panelImageLeftMin, maxValue: panelImageLeftMax, defaultValue: 0, label: 'onDrawPanel image top'},
+    {name: 'onDrawPanel_ImageOpacity', type: 'int', minValue: 0, maxValue: 1, defaultValue: 1, label: 'onDrawPanel image opacity'},
 
-    // Panel Text
+    // onDrawPanel Text
 
-    {name: 'panelText1', defaultValue: panelText1, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 1'},
-    {name: 'panelText2', defaultValue: panelText2, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 2'},
-    {name: 'panelText3', defaultValue: panelText3, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 3'},
-    {name: 'panelText4', defaultValue: panelText4, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'Panel text 4'},
-    {name: 'panelTextColor', type:'choice', label: 'Panel text color',
+    {name: 'onDrawPanel_Text1', defaultValue: panelText1, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 1'},
+    {name: 'onDrawPanel_Text2', defaultValue: panelText2, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 2'},
+    {name: 'onDrawPanel_Text3', defaultValue: panelText3, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 3'},
+    {name: 'onDrawPanel_Text4', defaultValue: panelText4, type: 'str', minLength: 0, maxLength: panelTextMax, label: 'onDrawPanel text 4'},
+    {name: 'onDrawPanel_TextColor', type:'choice', label: 'onDrawPanel text color',
         choice1: colorAqua,
         choice2: colorBlack,
         choice3: colorBlue,
@@ -188,25 +190,25 @@ cb.settings_choices = [
         choice17: colorYellow,
         defaultValue: panelTextColorDefaultValue
     },
-    {name: 'panelTextLeft', type: 'int', minValue: panelTextTopMin, maxValue: panelTextTopMax, defaultValue: 0, label: 'Panel text left'},
-    {name: 'panelTextTop', type: 'int', minValue: panelTextLeftMin, maxValue: panelTextLeftMax, defaultValue: 0, label: 'Panel text top'},
-    {name: 'panelTextFontSize', type: 'int', label: 'Panel text font size'},
-
-    // Panel image fileIDs
-
-    {name: 'image1fileID', defaultValue: image1fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 1'},
-    {name: 'image2fileID', defaultValue: image2fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 2'},
-    {name: 'image3fileID', defaultValue: image3fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 3'},
-    {name: 'image4fileID', defaultValue: image4fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 4'},
-    {name: 'image5fileID', defaultValue: image5fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 5'},
-    {name: 'image6fileID', defaultValue: image6fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 6'},
-    {name: 'image7fileID', defaultValue: image7fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 7'},
-    {name: 'image8fileID', defaultValue: image8fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 8'},
-    {name: 'image9fileID', defaultValue: image9fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'Panel image fileID 9'},
+    {name: 'onDrawPanel_TextLeft', type: 'int', minValue: panelTextTopMin, maxValue: panelTextTopMax, defaultValue: 0, label: 'onDrawPanel text left'},
+    {name: 'onDrawPanel_TextTop', type: 'int', minValue: panelTextLeftMin, maxValue: panelTextLeftMax, defaultValue: 0, label: 'onDrawPanel text top'},
+    {name: 'onDrawPanel_TextFontSize', type: 'int', label: 'onDrawPanel text font size'},
 
     // design
 
-    {name: 'panelTextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 12, label: 'Panel text font spacing'},
+    {name: 'onDrawPanel_TextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 12, label: 'onDrawPanel text font spacing'},
+
+    // image fileIDs
+
+    {name: 'image1fileID', defaultValue: image1fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 1'},
+    {name: 'image2fileID', defaultValue: image2fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 2'},
+    {name: 'image3fileID', defaultValue: image3fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 3'},
+    {name: 'image4fileID', defaultValue: image4fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 4'},
+    {name: 'image5fileID', defaultValue: image5fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 5'},
+    {name: 'image6fileID', defaultValue: image6fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 6'},
+    {name: 'image7fileID', defaultValue: image7fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 7'},
+    {name: 'image8fileID', defaultValue: image8fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 8'},
+    {name: 'image9fileID', defaultValue: image9fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 9'},
 ];
 
 cb.onDrawPanel(function (user) {
@@ -223,24 +225,24 @@ cb.onDrawPanel(function (user) {
         wink: cb.settings.image9fileID
     };
 
-    const image = images[cb.settings.panelImage];
-    const color = cb.settings.panelTextColor;
-    const fontSize = cb.settings.panelTextFontSize;
-    const fontSpacing = cb.settings.panelTextFontSpacing;
+    const image = images[cb.settings.onDrawPanel_Image];
+    const color = cb.settings.onDrawPanel_TextColor;
+    const fontSize = cb.settings.onDrawPanel_TextFontSize;
+    const fontSpacing = cb.settings.onDrawPanel_TextFontSpacing;
 
     // imageMargin and text positioning
-    const top = cb.settings.panelTextTop;
-    const left = cb.settings.panelTextLeft;
+    const top = cb.settings.onDrawPanel_TextTop;
+    const left = cb.settings.onDrawPanel_TextLeft;
     // @todo make this variable
     // const imageMargin = 150;
-    // const left = cb.settings.panelTextLeft + imageMargin;
+    // const left = cb.settings.onDrawPanel_TextLeft + imageMargin;
 
     const imageLayer = {
         'type': 'image',
         'fileID': image,
-        'left':  cb.settings.panelImageLeft,
-        'top': cb.settings.panelImageTop,
-        'opacity': cb.settings.panelImageOpacity
+        'left':  cb.settings.onDrawPanel_ImageLeft,
+        'top': cb.settings.onDrawPanel_ImageTop,
+        'opacity': cb.settings.onDrawPanel_ImageOpacity
     };
 
     var layers = [];
@@ -249,16 +251,16 @@ cb.onDrawPanel(function (user) {
         var text = '';
         switch(i) {
             case 0:
-                text = cb.settings.panelText4;
+                text = cb.settings.onDrawPanel_Text4;
                 break;
             case 1:
-                text = cb.settings.panelText3;
+                text = cb.settings.onDrawPanel_Text3;
                 break;
             case 2:
-                text = cb.settings.panelText2;
+                text = cb.settings.onDrawPanel_Text2;
                 break;
             case 3:
-                text = cb.settings.panelText1;
+                text = cb.settings.onDrawPanel_Text1;
                 break;
         }
         layers.push({
@@ -282,11 +284,11 @@ cb.onDrawPanel(function (user) {
 // onHandles
 
 cb.onEnter(function (user) {
-    chatNotice(cb.settings.enterMessage, user['user'], cb.settings.enterColor)
+    chatNotice(cb.settings.onEnter_Text, user['user'], cb.settings.onEnter_Color)
 });
 
 cb.onLeave(function (user) {
-    chatNotice(cb.settings.leaveMessage, user['user'], cb.settings.leaveColor)
+    chatNotice(cb.settings.onLeave_Text, user['user'], cb.settings.onLeave_Color)
 });
 
 cb.onMessage(function (msg) {
@@ -294,7 +296,7 @@ cb.onMessage(function (msg) {
 
     if (msg['user'] == cb.room_slug) {
         if (msg['m'].match(/\/changeRoomSubject/i)) {
-            cb.settings.room = params;
+            cb.settings.subject = params;
             cb.changeRoomSubject(params)
         }
 
@@ -305,53 +307,48 @@ cb.onMessage(function (msg) {
             cb.limitCam_stop();
         }
         
-        if (msg['m'].match(/\/drawPanel/i)) {
+        if (msg['m'].match(/\/onDrawPanel/i)) {
             cb.drawPanel();
         }
-
-        if (msg['m'].match(/\/drawPanelImage/i)) {
-            cb.settings.panelImage = params;
+        if (msg['m'].match(/\/onDrawPanel_Image/i)) {
+            cb.settings.onDrawPanel_Image = params;
         }
-
-        if (msg['m'].match(/\/drawPanelTextColor/i)) {
-            cb.settings.panelTextColor = params;
+        if (msg['m'].match(/\/onDrawPanel_TextColor/i)) {
+            cb.settings.onDrawPanel_TextColor = params;
         }
-
-        if (msg['m'].match(/\/onEnterText/i)) {
-            cb.settings.enterMessage = params;
-        }
-        if (msg['m'].match(/\/onEnterColor/i)) {
-            cb.settings.enterColor = params;
-        }
-        if (msg['m'].match(/\/onLeaveText/i)) {
-            cb.settings.leaveMessage = params;
-        }
-        if (msg['m'].match(/\/onLeaveColor/i)) {
-            cb.settings.leaveColor = params;
-        }
-
-        if (msg['m'].match(/\/drawPanelTextColor/i)) {
-            cb.settings.panelTextColor = params;
-        }
-
-        if (msg['m'].match(/\/drawPanelText/i)) {
+        if (msg['m'].match(/\/onDrawPanel_Text/i)) {
             const line = getFirstParam(params);
             params = getParams(params);
             switch(line) {
                 case '1':
-                    cb.settings.panelText1 = params;
+                    cb.settings.onDrawPanel_Text1 = params;
                     break;
                 case '2':
-                    cb.settings.panelText2 = params;
+                    cb.settings.onDrawPanel_Text2 = params;
                     break;
                 case '3':
-                    cb.settings.panelText3 = params;
+                    cb.settings.onDrawPanel_Text3 = params;
                     break;
                 case '4':
-                    cb.settings.panelText4 = params;
+                    cb.settings.onDrawPanel_Text4 = params;
                     break;
             }
         }
+
+        if (msg['m'].match(/\/onEnter_Text/i)) {
+            cb.settings.onEnter_Text = params;
+        }
+        if (msg['m'].match(/\/onEnter_Color/i)) {
+            cb.settings.onEnter_Color = params;
+        }
+        
+        if (msg['m'].match(/\/onLeave_Text/i)) {
+            cb.settings.onLeave_Text = params;
+        }
+        if (msg['m'].match(/\/onLeave_Color/i)) {
+            cb.settings.onLeave_Color = params;
+        }
+
     }
 });
 
@@ -364,7 +361,7 @@ cb.onTip(function (tip) {
 
 function chatNotice(message, user) {
     const userName = getUserName(user);
-    cb.chatNotice(message.replace('<userName>', userName), null, null, cb.settings.enterColor);
+    cb.chatNotice(message.replace(templateUserName, userName), null, null, cb.settings.onEnterColor);
 }
 
 function getUserName(user) {
@@ -392,6 +389,6 @@ function showAppAd(username) {
 }
 
 function init() {
-    cb.changeRoomSubject(cb.settings.room);
+    cb.changeRoomSubject(cb.settings.subject);
 }
 init();

@@ -12,29 +12,29 @@
 ```
 /changeRoomSubject new_subject
 
-/onEnterText anyMessage with <userName>
-/onEnterColor [yellow|red|green|blue|black]
-
-/onLeaveText anyMessage with <userName>
-/onLeaveColor [yellow|red|green|blue|black]
-
-/limitCam_start awayMessage
+/limitCam_start awayText
 /limitCam_stop
 
-/drawPanel
-/drawPanelTemplate image_template
+/onEnter_Text anyText with <userName>
+/onEnter_Color [yellow|red|green|blue|black]
 
-/drawPanelImageTop 5
-/drawPanelImageLeft 61
-/drawPanelImage [ass|brb|fuck|hello|kisses|shower|suck|what|wink]
-/drawPanelImageTop 5
-/drawPanelImageLeft 61
+/onDrawPanel_ImageTop 5
+/onDrawPanel_ImageLeft 61
+/onDrawPanel_Image [ass|brb|fuck|hello|kisses|shower|suck|what|wink]
+/onDrawPanel_ImageTop 5
+/onDrawPanel_ImageLeft 61
 
-/drawPanelTextColor [yellow|red|green|blue|black]
-/drawPanelText 1 anyStartingText
-/drawPanelText 2 anyMoreText
-/drawPanelText 3 anyMoreMoreText
-/drawPanelText 4 anyEndingText
+/onDrawPanel_TextColor [yellow|red|green|blue|black]
+/onDrawPanel_Text 1 anyStartingText
+/onDrawPanel_Text 2 anyMoreText
+/onDrawPanel_Text 3 anyMoreMoreText
+/onDrawPanel_Text 4 anyEndingText
+
+/onLeave_Text anyText with <userName>
+/onLeave_Color [yellow|red|green|blue|black]
+
+/onDrawPanel
+/onDrawPanelTemplate image_template
 ```
 ## Launch App
 
