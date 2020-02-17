@@ -237,7 +237,37 @@ cb.settings_choices = [
 
     // design
 
-    {name: 'onDrawPanel_TextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 12, label: 'onDrawPanel text font spacing'}
+    {name: 'onDrawPanel_TextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 12, label: 'onDrawPanel text font spacing'},
+
+    // image fileIDs
+    
+    {name: 'fileID_Ass', defaultValue: fileID_Ass, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Ass'},
+    {name: 'fileID_BabyTipMenu', defaultValue: fileID_BabyTipMenu, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID BabyTipMenu'},
+    {name: 'fileID_Bienvenidos', defaultValue: fileID_Bienvenidos, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Bienvenidos'},
+    {name: 'fileID_Brb', defaultValue: fileID_Brb, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Brb'},
+    {name: 'fileID_Bye', defaultValue: fileID_Bye, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Bye'},
+    {name: 'fileID_Fuck', defaultValue: fileID_Fuck, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Fuck'},
+    {name: 'fileID_Girl', defaultValue: fileID_Girl, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Girl'},
+    {name: 'fileID_GoodBye', defaultValue: fileID_GoodBye, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID GoodBye'},
+    {name: 'fileID_Heart', defaultValue: fileID_Heart, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Heart'},
+    {name: 'fileID_Hello', defaultValue: fileID_Hello, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Hello'},
+    {name: 'fileID_Homer', defaultValue: fileID_Homer, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Homer'},
+    {name: 'fileID_IfYouLikeThisShow', defaultValue: fileID_IfYouLikeThisShow, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID IfYouLikeThisShow'},
+    {name: 'fileID_Kisses', defaultValue: fileID_Kisses, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Kisses'},
+    {name: 'fileID_Kitten', defaultValue: fileID_Kitten, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Kitten'},
+    {name: 'fileID_Pole', defaultValue: fileID_Pole, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Pole'},
+    {name: 'fileID_QueRico', defaultValue: fileID_QueRico, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID QueRico'},
+    {name: 'fileID_SheIsAPrincess', defaultValue: fileID_SheIsAPrincess, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID SheIsAPrincess'},
+    {name: 'fileID_Shower', defaultValue: fileID_Shower, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Shower'},
+    {name: 'fileID_SpankFat', defaultValue: fileID_SpankFat, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID SpankFat'},
+    {name: 'fileID_SpankingFemales', defaultValue: fileID_SpankingFemales, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID SpankingFemales'},
+    {name: 'fileID_Stars', defaultValue: fileID_Stars, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Stars'},
+    {name: 'fileID_Suck', defaultValue: fileID_Suck, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Suck'},
+    {name: 'fileID_TipIfYouLikeHer', defaultValue: fileID_TipIfYouLikeHer, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID TipIfYouLikeHer'},
+    {name: 'fileID_Welcome', defaultValue: fileID_Welcome, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Welcome'},
+    {name: 'fileID_WelcomeBackBeautiful', defaultValue: fileID_WelcomeBackBeautiful, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID WelcomeBackBeautiful'},
+    {name: 'fileID_What', defaultValue: fileID_What, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID What'},
+    {name: 'fileID_Wink', defaultValue: fileID_Wink, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'fileID Wink'}
 ];
 
 cb.onDrawPanel(function (user) {
