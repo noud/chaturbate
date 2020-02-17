@@ -27,6 +27,25 @@ const colorTeal = 'teal';
 const colorWhite = 'white';
 const colorYellow = 'yellow';
 
+// image
+// fileIDs (fixed)
+// Filename (web)
+
+// 250x80
+const fileID_Ass = '6735e182-6178-46a1-a7cf-79c0ea86fa77';
+const fileID_Brb = '96349a24-b717-4a3d-aca1-46ea1cd6b5cb';
+const fileID_Fuck = '90284acc-63cc-440a-b4b1-600f7cce31c0';
+const fileID_Hello = 'a0ecf610-7516-41eb-9f1c-ebdc7feec449';
+const fileID_Kisses = 'a78c3fa9-4091-4a53-929e-8754b814d97a';
+const fileID_Shower = 'c10b1583-2b46-432a-b8a7-162fdb288178';
+const fileID_Suck = '4842d1ea-ae15-411b-a41c-1eda7bd85ce4';
+const fileID_What = '56e5c9fe-8671-48dd-80be-c7aa885fd694';
+const fileID_Wink = 'b222730f-7983-48ae-80fc-4f2c20c7936c';
+
+const fullID_Shower = '2439a58a-8b1c-4917-8c5c-d8b2d1f0f243';
+
+// 17 colorCodes
+
 const colorCodeGreen = '#008000';
 const colorCodeBlue = '#0000FF';
 
@@ -45,20 +64,6 @@ const panelImageDefaultValue = 'hello';
 
 const imageMax = 9;
 const imagefileIDMax = 44;
-
-// fileID is Filename on the web
-
-const image1fileIDDefaultValue = '6735e182-6178-46a1-a7cf-79c0ea86fa77';
-const image2fileIDDefaultValue = '96349a24-b717-4a3d-aca1-46ea1cd6b5cb';
-const image3fileIDDefaultValue = '90284acc-63cc-440a-b4b1-600f7cce31c0';
-const image4fileIDDefaultValue = 'a0ecf610-7516-41eb-9f1c-ebdc7feec449';
-const image5fileIDDefaultValue = 'a78c3fa9-4091-4a53-929e-8754b814d97a';
-// 250x80
-const image6fileIDDefaultValue = 'c10b1583-2b46-432a-b8a7-162fdb288178';
-// full: '2439a58a-8b1c-4917-8c5c-d8b2d1f0f243',
-const image7fileIDDefaultValue = '4842d1ea-ae15-411b-a41c-1eda7bd85ce4';
-const image8fileIDDefaultValue = '56e5c9fe-8671-48dd-80be-c7aa885fd694';
-const image9fileIDDefaultValue = 'b222730f-7983-48ae-80fc-4f2c20c7936c';
 
 const textLayers = 4;
 const panelText1 = 'so';
@@ -196,33 +201,20 @@ cb.settings_choices = [
 
     // design
 
-    {name: 'onDrawPanel_TextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 12, label: 'onDrawPanel text font spacing'},
-
-    // image fileIDs
-
-    {name: 'image1fileID', defaultValue: image1fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 1'},
-    {name: 'image2fileID', defaultValue: image2fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 2'},
-    {name: 'image3fileID', defaultValue: image3fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 3'},
-    {name: 'image4fileID', defaultValue: image4fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 4'},
-    {name: 'image5fileID', defaultValue: image5fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 5'},
-    {name: 'image6fileID', defaultValue: image6fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 6'},
-    {name: 'image7fileID', defaultValue: image7fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 7'},
-    {name: 'image8fileID', defaultValue: image8fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 8'},
-    {name: 'image9fileID', defaultValue: image9fileIDDefaultValue, type: 'str', minLength: 0, maxLength: imagefileIDMax, label: 'image fileID 9'},
+    {name: 'onDrawPanel_TextFontSpacing', type: 'int', minValue: 12, maxValue: 46, defaultValue: 12, label: 'onDrawPanel text font spacing'}
 ];
 
 cb.onDrawPanel(function (user) {
-    // @todo make variable
     var images = {
-        ass: cb.settings.image1fileID,
-        brb: cb.settings.image2fileID,
-        fuck: cb.settings.image3fileID,
-        hello: cb.settings.image4fileID,
-        kisses: cb.settings.image5fileID,
-        shower: cb.settings.image6fileID,
-        suck: cb.settings.image7fileID,
-        what: cb.settings.image8fileID,
-        wink: cb.settings.image9fileID
+        ass: fileID_Ass,
+        brb: fileID_Brb,
+        fuck: fileID_Fuck,
+        hello: fileID_Hello,
+        kisses: fileID_Kisses,
+        shower: fileID_Shower,
+        suck: fileID_Suck,
+        what: fileID_What,
+        wink: fileID_Wink
     };
 
     const image = images[cb.settings.onDrawPanel_Image];
