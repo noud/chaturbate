@@ -18,8 +18,6 @@
 /onEnter_Text anyText with <userName>
 /onEnter_Color [yellow|red|green|blue|black]
 
-/onDrawPanel_ImageTop 5
-/onDrawPanel_ImageLeft 61
 /onDrawPanel_Image [ass|brb|fuck|hello|kisses|shower|suck|what|wink]
 /onDrawPanel_ImageTop 5
 /onDrawPanel_ImageLeft 61
