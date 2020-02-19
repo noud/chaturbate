@@ -1,4 +1,4 @@
-# [roomManager.js](https://github.com/noud/chaturbate/blob/master/noud41/roomManager.js)
+# [roomManager](https://github.com/noud/chaturbate/blob/master/noud41/roomManager.js)
 
 ![roomManager Panel](./docs/Panel.png?raw=true "roomManager")
 
