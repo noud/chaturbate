@@ -1,4 +1,4 @@
-# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/): [crazy_tickets](https://chaturbate.com/apps/sourcecode/crazy_tickets/?version=&slot=0)
+# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/): [crazy_tickets](https://chaturbate.com/apps/sourcecode/crazy-tickets/?version=&slot=0)
 
 [![Chaturbate](./../logo.png?raw=true "Chaturbate")
 ](https://chaturbate.com/)
