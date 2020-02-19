@@ -1,6 +1,3 @@
-// https://chaturbate.com/apps/user_uploads/2/jeffreyvels1994/
-// https://chaturbate.com/apps/sourcecode/welcome-msg-by-jeffreyvels1994/?version=&slot=2
-
 /**
  * App: welcome msg by jeffreyvels1994
  * app version: 2.0.1.6
