@@ -8,8 +8,8 @@
 ## chat commands
 
 ```
-/lol        # to see the list of prizes \n";
-/lol all    # to send the list to all viewers if you're a mod or the broadcaster\n";
+/lol        # to see the list of prizes 
+/lol all    # to send the list to all viewers if you're a mod or the broadcaster
 /winners    # to see a list of the last 20 winners 
 ```
 
