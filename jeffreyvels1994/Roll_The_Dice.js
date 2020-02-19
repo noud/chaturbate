@@ -1,6 +1,3 @@
-// https://chaturbate.com/apps/user_uploads/2/jeffreyvels1994/
-// https://chaturbate.com/apps/sourcecode/roll-the-dice-5/?version=&slot=2
-
 /**
  * Roll the Dice
  * Version: 1.1.1

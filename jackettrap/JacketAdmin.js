@@ -1,6 +1,3 @@
-// https://ru.chaturbate.com/apps/user_uploads/0/jackettrap/
-// https://ru.chaturbate.com/apps/sourcecode/jacketadmin/?version=&slot=0
-
 // JacketAdmin was developed by JacketTrap
 // I have no real industry experience with JavaScript as I'm not a webdesigner so
 // there may be some problems with this code-wise and it may just ~not work~

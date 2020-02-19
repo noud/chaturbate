@@ -1,4 +1,4 @@
-# Roll The Dice
+# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/2/jeffreyvels1994/) [Roll The Dice](https://chaturbate.com/apps/sourcecode/roll-the-dice-5/?version=&slot=2)
 
 [![Chaturbate](./../logo.png?raw=true "Chaturbate")
 ](https://chaturbate.com/)
