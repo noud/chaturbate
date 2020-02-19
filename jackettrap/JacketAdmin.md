@@ -1,4 +1,4 @@
-# [Jackettrap's Apps](https://ru.chaturbate.com/apps/user_uploads/0/jackettrap/) [JacketAdmin](https://ru.chaturbate.com/apps/app_details/jacketadmin/?version=&slot=0)
+# [Jackettrap's Apps](https://ru.chaturbate.com/apps/user_uploads/0/jackettrap/): [JacketAdmin](https://ru.chaturbate.com/apps/app_details/jacketadmin/?version=&slot=0)
 
 [![Chaturbate](./../logo.png?raw=true "Chaturbate")
 ](https://chaturbate.com/)
