@@ -11,3 +11,7 @@
 ## [Legacy](https://en.wikipedia.org/wiki/Legacy) Apps
 
 - [Roll The Dice](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/Roll_The_Dice.md)
+
+Girls are you able to test-drive? Give it a few minutes.
+
+## [issues](https://github.com/noud/chaturbate/issues) and ideas
