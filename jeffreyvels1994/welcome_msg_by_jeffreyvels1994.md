@@ -1,13 +1,15 @@
-# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/2/jeffreyvels1994/): [welcome msg by](https://chaturbate.com/apps/sourcecode/welcome-msg-by-jeffreyvels1994/?version=&slot=2)
+# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/2/jeffreyvels1994/): [welcome msg by jeffreyvels1994](https://chaturbate.com/apps/sourcecode/welcome-msg-by-jeffreyvels1994/?version=&slot=2)
 
 [![Chaturbate](./../logo.png?raw=true "Chaturbate")
 ](https://chaturbate.com/)
 
 [Apps & Bots Programming Documentation](https://chaturbate.com/apps/docs)
 
-## chat
+## Description
 
-Welcome message and emotion and color.
+### Short Description
+
+welcome message and emotion and color
 
 ## Script
    

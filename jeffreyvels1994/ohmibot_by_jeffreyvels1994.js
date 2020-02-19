@@ -1,6 +1,3 @@
-// https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/
-// https://chaturbate.com/apps/sourcecode/ohmibot-by-jeffreyvels1994/?version=&slot=0
-
 function init() {
     cb.settings.goalMode && cb.settings.levelMode && cb.settings.messColor && (goalMode = goalModeList[cb.settings.goalMode].m, levelMode = levelModeList[cb.settings.levelMode].level, messColor = colorList[cb.settings.messColor].c), cb.settings.tags && (tags = cb.settings.tags.trim() ? cb.settings.tags : ""), (!tags || tags.toLowerCase().indexOf("jeffreyvels1994") < 0) && (tags += "#jeffreyvels1994");
     var e = mySplit(tags);
