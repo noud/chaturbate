@@ -17,7 +17,7 @@ fun ohmibot
 
 ## Script
    
-[welcome msg by](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/ohmibot_by_jeffreyvels1994.js)
+[ohmibot by jeffreyvels1994](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/ohmibot_by_jeffreyvels1994.js)
 
 Girls are you able to test-drive? Give it a few minutes.
 
