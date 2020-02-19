@@ -1,4 +1,4 @@
-# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/): [ohmibot by jeffreyvels1994](https://chaturbate.com/apps/sourcecode/ohmibot-by-jeffreyvels1994/?version=&slot=0)
+# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/): [crazy_tickets](https://chaturbate.com/apps/sourcecode/crazy_tickets/?version=&slot=0)
 
 [![Chaturbate](./../logo.png?raw=true "Chaturbate")
 ](https://chaturbate.com/)
@@ -9,15 +9,15 @@
 
 ### Short Description
 
-new ohmibot
+fun
 
 ### Full Description
 
-fun ohmibot
+.new update for crazyTickets
 
 ## Script
 
-[ohmibot by jeffreyvels1994](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/ohmibot_by_jeffreyvels1994.js)
+[crazy_tickets](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/crazy_tickets.js)
 
 Girls are you able to test-drive? Give it a few minutes.
 

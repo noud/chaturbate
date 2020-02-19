@@ -1,6 +1,3 @@
-// https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/
-// https://chaturbate.com/apps/sourcecode/crazy-tickets/?version=&slot=0
-
 /*******************************************************
  *    Title: 	CrazyTicket + cinema
  *				A Hidden Cam Show Ticket Selling App

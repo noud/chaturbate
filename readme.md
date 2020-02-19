@@ -12,7 +12,7 @@
 
 /home/noud/Desktop/chaturbate/Apps/jackettrap/JacketAdmin.md
 
-
+- [crazy_tickets](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/crazy_tickets.md)
 - [JacketAdmin](https://github.com/noud/chaturbate/blob/master/jackettrap/JacketAdmin.md)
 - [ohmibot by jeffreyvels1994](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/ohmibot_by_jeffreyvels1994.md)
 - [Roll The Dice](https://github.com/noud/chaturbate/blob/master/jeffreyvels1994/Roll_The_Dice.md)
