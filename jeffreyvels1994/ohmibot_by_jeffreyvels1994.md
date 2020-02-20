@@ -1,4 +1,4 @@
-# [Jeffreyvels1994'S Bots](https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/): [ohmibot by jeffreyvels1994](https://chaturbate.com/apps/sourcecode/ohmibot-by-jeffreyvels1994/?version=&slot=0)
+# [Jeffreyvels1994'S Apps](https://chaturbate.com/apps/user_uploads/0/jeffreyvels1994/): [ohmibot by jeffreyvels1994](https://chaturbate.com/apps/sourcecode/ohmibot-by-jeffreyvels1994/?version=&slot=0)
 
 [![Chaturbate](./../logo.png?raw=true "Chaturbate")
 ](https://chaturbate.com/)
